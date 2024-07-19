@@ -15,8 +15,8 @@
                 <label for="Amount">Amount:</label>
                 <input type="number" id="Amount" name="Amount" required>
 
-                <label for="PaymentDate">Payment Date:</label>
-                <input type="date" id="PaymentDate" name="PaymentDate" required>
+                <label for="DatePaid">Payment Date:</label>
+                <input type="date" id="DatePaid" name="DatePaid" required>
 
                 <input type="submit" value="Add Dinner Money">
             </form>
@@ -27,9 +27,9 @@
             if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET)) {
                 $pupilID = $_GET['PupilID'];
                 $amount = $_GET['Amount'];
-                $paymentDate = $_GET['PaymentDate'];
+                $DatePaid = $_GET['DatePaid'];
 
-                $sql = "INSERT INTO DinnerMoney (PupilID, Amount, PaymentDate) VALUES ('$pupilID', '$amount', '$datepaid')";
+                $sql = "INSERT INTO DinnerMoney (PupilID, Amount, DatePaid) VALUES ('$pupilID', '$amount', '$DatePaid')";
                 if ($conn->query($sql) === TRUE) {
                     echo "<p>New record created successfully</p>";
                 } else {

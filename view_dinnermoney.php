@@ -13,9 +13,9 @@
 
             $result = $conn->query("SELECT * FROM DinnerMoney");
             if ($result->num_rows > 0) {
-                echo "<table><tr><th>Pupil ID</th><th>Amount</th><th>Payment Date</th></tr>";
+                echo "<table><tr><th>Pupil ID</th><th>Amount</th><th>DatePaid</th></tr>";
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><td>" . $row["PupilID"] . "</td><td>" . $row["Amount"] . "</td><td>" . $row["PaymentDate"] . "</td></tr>";
+                    echo "<tr><td>" . $row["PupilID"] . "</td><td>" . $row["Amount"] . "</td><td>" . $row["DatePaid"] . "</td></tr>";
                 }
                 echo "</table>";
             } else {
